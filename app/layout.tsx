@@ -32,8 +32,8 @@ function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
-              AI SDK
+            <Link href="/" className="text-xl font-bold  bg-gradient-to-r from-blue-500  to-indigo-600 text-transparent bg-clip-text">
+              Lumia AI
             </Link>
           </div>
 
@@ -46,12 +46,12 @@ function Header() {
                 className="text-purple-600 border-purple-200 hover:bg-purple-50"
                 asChild
               >
-                <Link href="https://github.com/vercel/ai" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/Hqzdev/nextjs-ai" target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4 mr-2" />
                   GitHub
                 </Link>
               </Button>
-              <Button size="sm" className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50">
+              <Button size="sm" className="bg-white text-purple-600 hover:bg-purple-50">
                 Get Started
               </Button>
             </div>
@@ -84,7 +84,7 @@ function Header() {
               </Button>
               <Button
                 size="sm"
-                className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50 justify-center"
+                className="bg-white text-purple-600 hover:bg-purple-50 justify-center"
               >
                 Get Started
               </Button>
@@ -121,7 +121,7 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-600">© {new Date().getFullYear()} AI SDK. All rights reserved.</p>
+            <p className="text-gray-600">© {new Date().getFullYear()} Lumia AI. All rights reserved.</p>
           </div>
           <div className="flex space-x-6">
             <Link href="#" className="text-gray-600 hover:text-purple-600">

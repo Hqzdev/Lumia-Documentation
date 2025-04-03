@@ -13,7 +13,7 @@ export default function Installation() {
       <div className="space-y-12 max-w-3xl">
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Prerequisites</h2>
-          <p className="text-gray-700 mb-4">Before installing the AI SDK, ensure you have the following:</p>
+          <p className="text-gray-700 mb-4">Before installing the Lumia AI, ensure you have the following:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Node.js 18.x or later</li>
             <li>npm 7.x or later, or yarn 1.22.x or later</li>
@@ -23,7 +23,7 @@ export default function Installation() {
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
-          <p className="text-gray-700 mb-4">You can install the AI SDK using npm, yarn, or pnpm:</p>
+          <p className="text-gray-700 mb-4">You can install the Lumia AI using npm, yarn, or pnpm:</p>
 
           <Tabs defaultValue="npm" className="mb-6">
             <TabsList className="border border-gray-200 bg-white text-gray-700">
@@ -55,7 +55,7 @@ export default function Installation() {
           </Tabs>
 
           <p className="text-gray-700 mb-4">
-            This installs the core AI SDK package and the OpenAI integration. If you want to use a different AI
+            This installs the core Lumia AI package and the OpenAI integration. If you want to use a different AI
             provider, you can install the corresponding package:
           </p>
 
@@ -121,7 +121,7 @@ async function testAiSdk() {
   try {
     const { text } = await generateText({
       model: openai('gpt-4o'),
-      prompt: 'Hello, AI SDK!',
+      prompt: 'Hello, Lumia AI!',
     });
     
     console.log('AI response:', text);
@@ -142,7 +142,7 @@ testAiSdk();`}
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
-          <p className="text-gray-700 mb-4">Now that you've installed the AI SDK, you can:</p>
+          <p className="text-gray-700 mb-4">Now that you've installed the Lumia AI, you can:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
             <li>
               Explore the{" "}

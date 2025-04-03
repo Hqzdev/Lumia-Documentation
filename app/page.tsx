@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-purple-50 to-white z-0" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI SDK Documentation</h1>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500  to-indigo-600 text-transparent bg-clip-text mb-6">Lumia AI Documentation</h1>
             <p className="text-xl text-gray-700 mb-8">
               A powerful toolkit for building AI-powered applications with ease
             </p>
@@ -96,7 +96,7 @@ main();`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <DocCard
             title="Installation Guide"
-            description="Learn how to install and set up the AI SDK in your project."
+            description="Learn how to install and set up the Lumia AI in your project."
             icon={<BookOpen className="h-6 w-6 text-purple-500" />}
             href="/installation"
           />

@@ -15,7 +15,7 @@ export default function Examples() {
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-8">Examples</h1>
       <p className="text-xl text-gray-700 mb-12 max-w-3xl">
-        Explore practical examples of the AI SDK in action. Each example includes complete code and explanations.
+        Explore practical examples of the Lumia AI in action. Each example includes complete code and explanations.
       </p>
 
       <div className="space-y-16">
@@ -219,12 +219,12 @@ export default function ChatExample() {
                     <div className="flex flex-col space-y-4">
                       <div className="flex justify-end">
                         <div className="max-w-[80%] rounded-lg px-4 py-2 bg-purple-100 text-gray-800">
-                          What can you tell me about the AI SDK?
+                          What can you tell me about the Lumia AI?
                         </div>
                       </div>
                       <div className="flex justify-start">
                         <div className="max-w-[80%] rounded-lg px-4 py-2 bg-gray-100 text-gray-800">
-                          The AI SDK is a toolkit that simplifies building AI-powered applications. It provides a
+                          The Lumia AI is a toolkit that simplifies building AI-powered applications. It provides a
                           unified API for working with different AI models, making it easier to integrate capabilities
                           like text generation, chat interfaces, and more into your applications. It supports various
                           frameworks including React, Next.js, Vue, and Node.js, and offers standardized functions like
