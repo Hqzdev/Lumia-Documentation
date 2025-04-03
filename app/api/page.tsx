@@ -74,10 +74,10 @@ export default function ApiReference() {
           <h3 className="text-xl font-semibold text-gray-900 mb-3">Example</h3>
           <Tabs defaultValue="js" className="mb-6">
             <TabsList className="border border-gray-200 bg-white text-gray-700">
-              <TabsTrigger value="js" className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700">
+              <TabsTrigger value="js" className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700">
                 JavaScript
               </TabsTrigger>
-              <TabsTrigger value="ts" className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700">
+              <TabsTrigger value="ts" className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700">
                 TypeScript
               </TabsTrigger>
             </TabsList>
@@ -246,7 +246,7 @@ chatAssistant();`}
       </div>
 
       <div className="mt-12 text-center">
-        <Button className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50">
+        <Button className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">
           View Full API Documentation
         </Button>
       </div>

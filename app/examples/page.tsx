@@ -33,19 +33,19 @@ export default function Examples() {
                 <TabsList className="border border-gray-200 bg-white text-gray-700 mb-4">
                   <TabsTrigger
                     value="code"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Code
                   </TabsTrigger>
                   <TabsTrigger
                     value="output"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Code
                   </TabsTrigger>
                   <TabsTrigger
                     value="output"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Output
                   </TabsTrigger>
@@ -84,7 +84,7 @@ main();`}
               </Tabs>
             </CardContent>
             <CardFooter>
-              <Button variant="outline" className="text-purple-600 border-purple-200 hover:bg-purple-50">
+              <Button variant="outline" className="text-blue-600 border-blue-200 hover:bg-blue-50">
                 View Full Example <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </CardFooter>
@@ -105,19 +105,19 @@ main();`}
                 <TabsList className="border border-gray-200 bg-white text-gray-700 mb-4">
                   <TabsTrigger
                     value="code"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Code
                   </TabsTrigger>
                   <TabsTrigger
                     value="output"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Code
                   </TabsTrigger>
                   <TabsTrigger
                     value="output"
-                    className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                    className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
                   >
                     Output
                   </TabsTrigger>
@@ -181,7 +181,7 @@ export default function ChatExample() {
           <div key={i} className={\`flex \${message.role === 'user' ? 'justify-end' : 'justify-start'}\`}>
             <div className={\`max-w-[80%] rounded-lg px-4 py-2 \${
               message.role === 'user' 
-                ? 'bg-purple-100 text-gray-800' 
+                ? 'bg-blue-100 text-gray-800' 
                 : 'bg-gray-100 text-gray-800'
             }\`}>
               {message.content || (isGenerating && i === messages.length - 1 ? '...' : '')}
@@ -196,12 +196,12 @@ export default function ChatExample() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type a message..."
-          className="flex-1 border rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"
+          className="flex-1 border rounded-l-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
           disabled={isGenerating}
         />
         <button
           type="submit"
-          className="bg-white text-purple-600 border border-l-0 border-purple-200 hover:bg-purple-50 rounded-r-md px-4 py-2 font-medium"
+          className="bg-white text-blue-600 border border-l-0 border-blue-200 hover:bg-blue-50 rounded-r-md px-4 py-2 font-medium"
           disabled={isGenerating}
         >
           Send
@@ -218,7 +218,7 @@ export default function ChatExample() {
                   <div className="bg-gray-50 rounded-lg border border-gray-200 p-4">
                     <div className="flex flex-col space-y-4">
                       <div className="flex justify-end">
-                        <div className="max-w-[80%] rounded-lg px-4 py-2 bg-purple-100 text-gray-800">
+                        <div className="max-w-[80%] rounded-lg px-4 py-2 bg-blue-100 text-gray-800">
                           What can you tell me about the Lumia AI?
                         </div>
                       </div>
@@ -238,7 +238,7 @@ export default function ChatExample() {
               </Tabs>
             </CardContent>
             <CardFooter>
-              <Button variant="outline" className="text-purple-600 border-purple-200 hover:bg-purple-50">
+              <Button variant="outline" className="text-blue-600 border-blue-200 hover:bg-blue-50">
                 View Full Example <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </CardFooter>
@@ -296,13 +296,13 @@ export default function Summarizer() {
       <Button 
         onClick={summarizeArticle}
         disabled={loading}
-        className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50 w-full"
+        className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50 w-full"
       >
         {loading ? 'Summarizing...' : 'Summarize Article'}
       </Button>
       
       {summary && (
-        <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
+        <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
           <h3 className="font-medium text-gray-900 mb-2">Summary</h3>
           <p className="text-gray-700">{summary}</p>
         </div>
@@ -316,7 +316,7 @@ export default function Summarizer() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button variant="outline" className="text-purple-600 border-purple-200 hover:bg-purple-50">
+              <Button variant="outline" className="text-blue-600 border-blue-200 hover:bg-blue-50">
                 View Full Example <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </CardFooter>

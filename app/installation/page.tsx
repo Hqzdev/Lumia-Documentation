@@ -27,18 +27,18 @@ export default function Installation() {
 
           <Tabs defaultValue="npm" className="mb-6">
             <TabsList className="border border-gray-200 bg-white text-gray-700">
-              <TabsTrigger value="npm" className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700">
+              <TabsTrigger value="npm" className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700">
                 npm
               </TabsTrigger>
               <TabsTrigger
                 value="yarn"
-                className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
               >
                 yarn
               </TabsTrigger>
               <TabsTrigger
                 value="pnpm"
-                className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
               >
                 pnpm
               </TabsTrigger>
@@ -63,19 +63,19 @@ export default function Installation() {
             <TabsList className="border border-gray-200 bg-white text-gray-700">
               <TabsTrigger
                 value="anthropic"
-                className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
               >
                 Anthropic
               </TabsTrigger>
               <TabsTrigger
                 value="cohere"
-                className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
               >
                 Cohere
               </TabsTrigger>
               <TabsTrigger
                 value="mistral"
-                className="data-[state=active]:bg-purple-50 data-[state=active]:text-purple-700"
+                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
               >
                 Mistral
               </TabsTrigger>
@@ -146,28 +146,28 @@ testAiSdk();`}
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
             <li>
               Explore the{" "}
-              <a href="/api" className="text-purple-600 hover:underline">
+              <a href="/api" className="text-blue-600 hover:underline">
                 API Reference
               </a>{" "}
               to learn about all available functions
             </li>
             <li>
               Check out the{" "}
-              <a href="/examples" className="text-purple-600 hover:underline">
+              <a href="/examples" className="text-blue-600 hover:underline">
                 Examples
               </a>{" "}
               for practical use cases
             </li>
             <li>
               Follow the{" "}
-              <a href="/tutorials" className="text-purple-600 hover:underline">
+              <a href="/tutorials" className="text-blue-600 hover:underline">
                 Tutorials
               </a>{" "}
               for step-by-step guides
             </li>
           </ul>
 
-          <Button className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50">
+          <Button className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">
             View Getting Started Guide
           </Button>
         </section>

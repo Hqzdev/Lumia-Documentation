@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-50 to-white z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white z-0" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500  to-indigo-600 text-transparent bg-clip-text mb-6">Lumia AI Documentation</h1>
@@ -15,10 +15,10 @@ export default function Home() {
               A powerful toolkit for building AI-powered applications with ease
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50" size="lg">
+              <Button className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50" size="lg">
                 Get Started <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="text-purple-600 border-purple-200 hover:bg-purple-50" size="lg">
+              <Button variant="outline" className="text-blue-600 border-blue-200 hover:bg-blue-50" size="lg">
                 View on GitHub
               </Button>
             </div>
@@ -30,17 +30,17 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon={<Terminal className="h-8 w-8 text-purple-500" />}
+            icon={<Terminal className="h-8 w-8 text-blue-500" />}
             title="Easy Integration"
             description="Integrate AI capabilities into your application with just a few lines of code."
           />
           <FeatureCard
-            icon={<Zap className="h-8 w-8 text-purple-500" />}
+            icon={<Zap className="h-8 w-8 text-blue-500" />}
             title="High Performance"
             description="Optimized for speed and efficiency, even with complex AI operations."
           />
           <FeatureCard
-            icon={<Code className="h-8 w-8 text-purple-500" />}
+            icon={<Code className="h-8 w-8 text-blue-500" />}
             title="Flexible API"
             description="Comprehensive API that adapts to your specific use case and requirements."
           />
@@ -82,7 +82,7 @@ main();`}
               </pre>
             </div>
             <div className="mt-8 text-center">
-              <Button className="bg-white text-purple-600 border border-purple-200 hover:bg-purple-50">
+              <Button className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">
                 View More Examples <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -97,25 +97,25 @@ main();`}
           <DocCard
             title="Installation Guide"
             description="Learn how to install and set up the Lumia AI in your project."
-            icon={<BookOpen className="h-6 w-6 text-purple-500" />}
+            icon={<BookOpen className="h-6 w-6 text-blue-500" />}
             href="/installation"
           />
           <DocCard
             title="API Reference"
             description="Detailed documentation of all available methods and options."
-            icon={<Code className="h-6 w-6 text-purple-500" />}
+            icon={<Code className="h-6 w-6 text-blue-500" />}
             href="/api"
           />
           <DocCard
             title="Tutorials"
             description="Step-by-step guides for common use cases and scenarios."
-            icon={<Terminal className="h-6 w-6 text-purple-500" />}
+            icon={<Terminal className="h-6 w-6 text-blue-500" />}
             href="/tutorials"
           />
           <DocCard
             title="Examples"
             description="Real-world examples and code snippets to get you started."
-            icon={<Zap className="h-6 w-6 text-purple-500" />}
+            icon={<Zap className="h-6 w-6 text-blue-500" />}
             href="/examples"
           />
         </div>
@@ -137,13 +137,13 @@ function FeatureCard({ icon, title, description }) {
 function DocCard({ icon, title, description, href }) {
   return (
     <Link href={href} className="block">
-      <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow hover:border-purple-200">
+      <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow hover:border-blue-200">
         <div className="flex items-start">
           <div className="mr-4 mt-1">{icon}</div>
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
             <p className="text-gray-600 mb-4">{description}</p>
-            <span className="text-purple-600 font-medium flex items-center">
+            <span className="text-blue-600 font-medium flex items-center">
               Learn more <ChevronRight className="ml-1 h-4 w-4" />
             </span>
           </div>

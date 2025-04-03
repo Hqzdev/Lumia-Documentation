@@ -43,7 +43,7 @@ function Header() {
               <Button
                 variant="outline"
                 size="sm"
-                className="text-purple-600 border-purple-200 hover:bg-purple-50"
+                className="text-blue-600 border-blue-200 hover:bg-blue-50"
                 asChild
               >
                 <Link href="https://github.com/Hqzdev/nextjs-ai" target="_blank" rel="noopener noreferrer">
@@ -51,7 +51,7 @@ function Header() {
                   GitHub
                 </Link>
               </Button>
-              <Button size="sm" className="bg-white text-purple-600 hover:bg-purple-50">
+              <Button size="sm" className="bg-white text-blue-600 hover:bg-blue-50">
                 Get Started
               </Button>
             </div>
@@ -74,7 +74,7 @@ function Header() {
               <Button
                 variant="outline"
                 size="sm"
-                className="text-purple-600 border-purple-200 hover:bg-purple-50 justify-center"
+                className="text-blue-600 border-blue-200 hover:bg-blue-50 justify-center"
                 asChild
               >
                 <Link href="https://github.com/vercel/ai" target="_blank" rel="noopener noreferrer">
@@ -84,7 +84,7 @@ function Header() {
               </Button>
               <Button
                 size="sm"
-                className="bg-white text-purple-600 hover:bg-purple-50 justify-center"
+                className="bg-white text-blue-600 hover:bg-blue-50 justify-center"
               >
                 Get Started
               </Button>
@@ -108,7 +108,7 @@ function NavLinks({ mobile = false }) {
     <Link
       key={link.href}
       href={link.href}
-      className={`text-gray-700 hover:text-purple-600 font-medium ${mobile ? "text-lg py-2" : ""}`}
+      className={`text-gray-700 hover:text-blue-600 font-medium ${mobile ? "text-lg py-2" : ""}`}
     >
       {link.label}
     </Link>
@@ -124,13 +124,13 @@ function Footer() {
             <p className="text-gray-600">© {new Date().getFullYear()} Lumia AI. All rights reserved.</p>
           </div>
           <div className="flex space-x-6">
-            <Link href="#" className="text-gray-600 hover:text-purple-600">
+            <Link href="#" className="text-gray-600 hover:text-blue-600">
               Terms
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-purple-600">
+            <Link href="#" className="text-gray-600 hover:text-blue-600">
               Privacy
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-purple-600">
+            <Link href="#" className="text-gray-600 hover:text-blue-600">
               Contact
             </Link>
           </div>
