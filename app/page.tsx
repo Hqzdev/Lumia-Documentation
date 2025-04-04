@@ -29,10 +29,10 @@ export default function Home() {
               A powerful toolkit for building AI-powered applications with ease
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white border border-blue-200 rounded-3xl hover:bg-blue-50" size="lg">
+              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl hover:bg-blue-50" size="lg">
                 Get Started <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="text-blue-600 border-blue-200" size="lg">
+              <Button variant="outline" className="text-blue-600 rounded-2xl" size="lg">
                 View on GitHub
               </Button>
             </div>
@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Features Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rounded-2xl ">
           <FeatureCard
             icon={<Terminal className="h-8 w-8 text-blue-500" />}
             title="Easy Integration"
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Start Example</h2>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-white rounded-2xl overflow-hidden">
               <div className="bg-gray-800 px-4 py-2 flex items-center">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -96,7 +96,7 @@ main();`}
               </pre>
             </div>
             <div className="mt-8 text-center">
-              <Button className="bg-white text-blue-600 border border-blue-200 hover:bg-blue-50">
+              <Button className="bg-white text-blue-600 rounded-2xl hover:bg-blue-50">
                 View More Examples <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -181,7 +181,7 @@ main();`}
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className="bg-white p-6 rounded-2xl border-2 border-gray-200 transition-all duration-300 ease-out hover:scale-105">
+    <div className="bg-white p-6 rounded-2xl transition-all duration-300 ease-out hover:scale-105">
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>

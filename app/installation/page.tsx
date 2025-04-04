@@ -8,7 +8,7 @@ import { useState } from "react"
 export default function Installation() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">Installation Guide</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Installation <span className="text-blue-600">Guide</span></h1>
 
       <div className="space-y-12 max-w-3xl">
         <section>
@@ -44,52 +44,17 @@ export default function Installation() {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="npm" className="mt-2">
-              <CopyableCodeBlock code="npm install ai @ai-sdk/openai" />
+              <CopyableCodeBlock code="npm install ai @ai-sdk/Lumia" />
             </TabsContent>
             <TabsContent value="yarn" className="mt-2">
-              <CopyableCodeBlock code="yarn add ai @ai-sdk/openai" />
+              <CopyableCodeBlock code="yarn add ai @ai-sdk/Lumia" />
             </TabsContent>
             <TabsContent value="pnpm" className="mt-2">
-              <CopyableCodeBlock code="pnpm add ai @ai-sdk/openai" />
+              <CopyableCodeBlock code="pnpm add ai @ai-sdk/Lumia" />
             </TabsContent>
           </Tabs>
 
-          <p className="text-gray-700 mb-4">
-            This installs the core Lumia AI package and the OpenAI integration. If you want to use a different AI
-            provider, you can install the corresponding package:
-          </p>
-
-          <Tabs defaultValue="anthropic" className="mb-6">
-            <TabsList className="border border-gray-200 bg-white text-gray-700">
-              <TabsTrigger
-                value="anthropic"
-                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
-              >
-                Anthropic
-              </TabsTrigger>
-              <TabsTrigger
-                value="cohere"
-                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
-              >
-                Cohere
-              </TabsTrigger>
-              <TabsTrigger
-                value="mistral"
-                className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-700"
-              >
-                Mistral
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="anthropic" className="mt-2">
-              <CopyableCodeBlock code="npm install @ai-sdk/anthropic" />
-            </TabsContent>
-            <TabsContent value="cohere" className="mt-2">
-              <CopyableCodeBlock code="npm install @ai-sdk/cohere" />
-            </TabsContent>
-            <TabsContent value="mistral" className="mt-2">
-              <CopyableCodeBlock code="npm install @ai-sdk/mistral" />
-            </TabsContent>
-          </Tabs>
+         
         </section>
 
         <section>
@@ -99,7 +64,7 @@ export default function Installation() {
             project root:
           </p>
 
-          <CopyableCodeBlock code="OPENAI_API_KEY=your_openai_api_key_here" />
+          <CopyableCodeBlock code="Lumia_API_KEY=your_Lumia_api_key_here" />
 
           <p className="text-gray-700 mt-4">
             Make sure to add <code>.env</code> to your <code>.gitignore</code> file to avoid exposing your API keys.
@@ -115,12 +80,12 @@ export default function Installation() {
               <code className="language-javascript">
                 {`// test.js
 import { generateText } from 'ai';
-import { openai } from '@ai-sdk/openai';
+import { Lumia } from '@ai-sdk/Lumia';
 
 async function testAiSdk() {
   try {
     const { text } = await generateText({
-      model: openai('gpt-4o'),
+      model: Lumia('Lumia-V2-Max'),
       prompt: 'Hello, Lumia AI!',
     });
     
