@@ -65,8 +65,11 @@ function Header() {
             <Button
               size="sm"
               className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl text-white hover:opacity-90 transition-opacity"
+              asChild
             >
-              Get Started
+              <Link href="https://lurenai.vercel.app" target="_blank" rel="noopener noreferrer">
+                Get Started
+              </Link>
             </Button>
           </div>
 
@@ -81,13 +84,30 @@ function Header() {
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white/80 backdrop-blur-md rounded-b-3xl">
-          <div className="w-full mx-auto px-4 sm:px-5 lg:px-6 py-4 space-y-4">
+      <div className={`md:hidden fixed inset-0 bg-white/80 backdrop-blur-md transition-all duration-300 ease-in-out ${
+        isMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
+      }`}>
+        <div className="w-full h-full flex flex-col">
+          <div className="flex items-center justify-between p-4 border-b border-gray-100">
+            <Link
+              href="/"
+              className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
+            >
+              Lumia AI
+            </Link>
+            <button
+              className="p-2"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto p-4">
             <nav className="flex flex-col space-y-4">
               <NavLinks mobile />
             </nav>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 mt-8">
               <Button
                 variant="ghost"
                 size="sm"
@@ -102,13 +122,16 @@ function Header() {
               <Button
                 size="sm"
                 className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-3xl hover:opacity-90 transition-opacity justify-center"
+                asChild
               >
-                Get Started
+                <Link href="https://lurenai.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                </Link>
               </Button>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }
