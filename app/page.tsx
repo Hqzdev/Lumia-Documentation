@@ -154,10 +154,10 @@ main();`}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <div className="grid grid-cols-2 gap-4">
-                <Link href="#features" className="text-gray-400 hover:text-blue-400 transition-colors">Features</Link>
-                <Link href="#about" className="text-gray-400 hover:text-blue-400 transition-colors">About</Link>
-                <Link href="#pricing" className="text-gray-400 hover:text-blue-400 transition-colors">Pricing</Link>
-                <Link href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</Link>
+                <Link href="/features" className="text-gray-400 hover:text-blue-400 transition-colors">Features</Link>
+                <Link href="/about" className="text-gray-400 hover:text-blue-400 transition-colors">About</Link>
+                <Link href="/pricing" className="text-gray-400 hover:text-blue-400 transition-colors">Pricing</Link>
+                <Link href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</Link>
               </div>
             </div>
 
