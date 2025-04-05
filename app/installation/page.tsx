@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check, Copy } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
+
 
 export default function Installation() {
   return (
@@ -67,7 +69,7 @@ export default function Installation() {
           <CopyableCodeBlock code="Lumia_API_KEY=your_Lumia_api_key_here" />
 
           <p className="text-gray-700 mt-4">
-            Make sure to add <code>.env</code> to your <code>.gitignore</code> file to avoid exposing your API keys.
+            Make sure to add <code>.env</code> to your <code>.gitignore</code> file to avoid exposing your <Link href="/apikey" className="text-blue-600 hover:text-blue-700">API keys</Link>.
           </p>
         </section>
 

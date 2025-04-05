@@ -84,10 +84,15 @@ function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden fixed inset-0 bg-white/80 backdrop-blur-md transition-all duration-300 ease-in-out ${
-        isMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
+      <div className={`md:hidden fixed inset-0 z-50 ${
+        isMenuOpen ? 'visible' : 'invisible'
       }`}>
-        <div className="w-full h-full flex flex-col">
+        <div className={`absolute inset-0 bg-white/80 backdrop-blur-md transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'opacity-100' : 'opacity-0'
+        }`} />
+        <div className={`relative h-full flex flex-col transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-y-0' : 'translate-y-full'
+        }`}>
           <div className="flex items-center justify-between p-4 border-b border-gray-100">
             <Link
               href="/"

@@ -64,6 +64,7 @@ export const config: LumiaConfig = {
 };`}</code>
               </pre>
               <p className="text-gray-700">Set up your environment variables:</p>
+              <p className="text-gray-700">Get your API key <Link href="/apikey" className="text-blue-600 hover:text-blue-700">here</Link></p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
                 <code>{`# .env.local
 LUMIA_API_KEY=your_api_key_here`}</code>
