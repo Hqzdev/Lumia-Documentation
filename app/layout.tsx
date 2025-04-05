@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Menu, X } from "lucide-react"
+import { Github, Menu, X, ChevronDown } from "lucide-react"
 import { useState, ReactNode } from "react"
 import AnimatedGradient from "@/components/animated-gradient"
 import FloatingElements from "@/components/floating-elements"
@@ -130,7 +130,7 @@ function Header() {
                 asChild
               >
                 <Link href="https://lurenai.vercel.app" target="_blank" rel="noopener noreferrer">
-                  Get Started
+                  Get started
                 </Link>
               </Button>
             </div>
@@ -142,22 +142,93 @@ function Header() {
 }
 
 function NavLinks({ mobile = false }) {
+  const [showAdvancedMenu, setShowAdvancedMenu] = useState(false)
+  const [showResourcesMenu, setShowResourcesMenu] = useState(false)
+
   const links = [
-    { href: "/installation", label: "Installation" },
-    { href: "/api", label: "API" },
-    { href: "/examples", label: "Examples" },
-    { href: "/tutorials", label: "Tutorials" },
+    { href: "/about", label: "About" },
+    { href: "/pricing", label: "Pricing" },
+    
   ]
 
-  return links.map((link) => (
-    <Link
-      key={link.href}
-      href={link.href}
-      className={`text-gray-700 hover:text-blue-600 transition-colors font-medium ${mobile ? "text-lg py-2" : ""}`}
-    >
-      {link.label}
-    </Link>
-  ))
+  const advancedLinks = [
+    { href: "/api-reference", label: "API Reference" },
+    { href: "/integrations", label: "Integrations" },
+    { href: "/examples", label: "Examples" },
+    { href: "/tutorials", label: "Tutorials" },
+    { href: "/release-notes", label: "Release Notes" },
+  ]
+
+  const resourcesLinks = [
+    { href: "/documentation", label: "Documentation" },
+    { href: "/blog", label: "Blog" },
+    { href: "/community", label: "Community" },
+    { href: "/support", label: "Support" },
+  ]
+
+  return (
+    <>
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          target={link.external ? "_blank" : undefined}
+          rel={link.external ? "noopener noreferrer" : undefined}
+          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium ${mobile ? "text-lg py-2" : ""}`}
+        >
+          {link.label}
+        </Link>
+      ))}
+      
+      {/* Advanced Menu */}
+      <div className="relative">
+        <button
+          onClick={() => setShowAdvancedMenu(!showAdvancedMenu)}
+          className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1"
+        >
+          Advanced
+          <ChevronDown className={`h-4 w-4 transition-transform ${showAdvancedMenu ? 'rotate-180' : ''}`} />
+        </button>
+        <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden transition-all duration-300 ease-in-out ${
+          showAdvancedMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}>
+          {advancedLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Resources Menu */}
+      <div className="relative">
+        <button
+          onClick={() => setShowResourcesMenu(!showResourcesMenu)}
+          className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1"
+        >
+          Resources
+          <ChevronDown className={`h-4 w-4 transition-transform ${showResourcesMenu ? 'rotate-180' : ''}`} />
+        </button>
+        <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden transition-all duration-300 ease-in-out ${
+          showResourcesMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}>
+          {resourcesLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </>
+  )
 }
 
 
