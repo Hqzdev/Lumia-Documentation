@@ -73,71 +73,47 @@ function Header() {
             </Button>
           </div>
 
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile menu */}
-      <div className={`md:hidden fixed inset-0 z-50 ${
-        isMenuOpen ? 'visible' : 'invisible'
-      }`}>
-        <div className={`absolute inset-0 bg-white/80 backdrop-blur-md transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'opacity-100' : 'opacity-0'
-        }`} />
-        <div className={`relative h-full flex flex-col transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-y-0' : 'translate-y-full'
-        }`}>
-          <div className="flex items-center justify-between p-4 border-b border-gray-100">
-            <Link
-              href="/"
-              className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
-            >
-              Lumia AI
-            </Link>
-            <button
-              className="p-2"
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <X className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="flex-1 overflow-y-auto p-4">
-            <nav className="flex flex-col space-y-4">
-              <NavLinks mobile />
-            </nav>
-            <div className="flex flex-col space-y-2 mt-8">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-gray-700 hover:text-blue-600 transition-colors justify-center"
-                asChild
-              >
-                <Link href="https://github.com/vercel/ai" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Link>
-              </Button>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-3xl hover:opacity-90 transition-opacity justify-center"
-                asChild
-              >
-                <Link href="https://lurenai.vercel.app" target="_blank" rel="noopener noreferrer">
-                  Get started
-                </Link>
-              </Button>
-            </div>
-          </div>
+          <MobileMenu />
         </div>
       </div>
     </header>
+  )
+}
+
+function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="md:hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2 rounded-lg hover:bg-gray-100"
+      >
+        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-white">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex justify-between items-center mb-8">
+              <Link href="/" className="text-2xl font-bold">
+                Lumia AI
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-100"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              <NavLinks mobile />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -148,7 +124,8 @@ function NavLinks({ mobile = false }) {
   const links = [
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
-    
+    { href: "https://github.com/Hqzdev/nextjs-ai", label: "GitHub", external: true },
+    { href: "https://lurenai.vercel.app", label: "Get Started", external: true },
   ]
 
   const advancedLinks = [
@@ -184,19 +161,19 @@ function NavLinks({ mobile = false }) {
       <div className="relative">
         <button
           onClick={() => setShowAdvancedMenu(!showAdvancedMenu)}
-          className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1"
+          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
         >
           Advanced
           <ChevronDown className={`h-4 w-4 transition-transform ${showAdvancedMenu ? 'rotate-180' : ''}`} />
         </button>
-        <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden transition-all duration-300 ease-in-out ${
+        <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60 overflow-hidden'} transition-all duration-300 ease-in-out ${
           showAdvancedMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}>
           {advancedLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+              className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600 transition-colors`}
             >
               {link.label}
             </Link>
@@ -208,19 +185,19 @@ function NavLinks({ mobile = false }) {
       <div className="relative">
         <button
           onClick={() => setShowResourcesMenu(!showResourcesMenu)}
-          className="text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1"
+          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
         >
           Resources
           <ChevronDown className={`h-4 w-4 transition-transform ${showResourcesMenu ? 'rotate-180' : ''}`} />
         </button>
-        <div className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden transition-all duration-300 ease-in-out ${
+        <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60 overflow-hidden'} transition-all duration-300 ease-in-out ${
           showResourcesMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}>
           {resourcesLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+              className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600 transition-colors`}
             >
               {link.label}
             </Link>
