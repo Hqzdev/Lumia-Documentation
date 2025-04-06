@@ -93,22 +93,31 @@ function MobileMenu() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-white">
-          <div className="container mx-auto px-4 py-8">
-            <div className="flex justify-between items-center mb-8">
-              <Link href="/" className="text-2xl font-bold">
-                Lumia AI
-              </Link>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-100"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
+        <div className="fixed inset-0 z-50">
+          {/* Blurred background */}
+          <div 
+            className="absolute inset-0 bg-white/80 backdrop-blur-md"
+            onClick={() => setIsOpen(false)}
+          />
+          
+          {/* Menu content */}
+          <div className="relative h-full">
+            <div className="container mx-auto px-4 py-8">
+              <div className="flex justify-between items-center mb-8">
+                <Link href="/" className="text-2xl font-bold">
+                  Lumia AI
+                </Link>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 rounded-lg hover:bg-gray-100"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
 
-            <div className="space-y-6">
-              <NavLinks mobile />
+              <div className="space-y-6">
+                <NavLinks mobile />
+              </div>
             </div>
           </div>
         </div>
