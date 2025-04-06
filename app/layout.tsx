@@ -93,30 +93,29 @@ function MobileMenu() {
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50">
-          {/* Menu content */}
-          <div className="absolute inset-0 bg-white">
-            <div className="container mx-auto px-4 py-8">
-              <div className="flex justify-between items-center mb-8">
-                <Link href="/" className="text-2xl font-bold">
-                  Lumia AI
-                </Link>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-lg hover:bg-gray-100"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
+      <div className={`fixed inset-0 z-50 transition-transform duration-300 ease-in-out ${
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}>
+        <div className="absolute inset-0 bg-white">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex justify-between items-center mb-8">
+              <Link href="/" className="text-2xl font-bold">
+                Lumia AI
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-100"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
 
-              <div className="space-y-6">
-                <NavLinks mobile />
-              </div>
+            <div className="space-y-6">
+              <NavLinks mobile />
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -128,7 +127,8 @@ function NavLinks({ mobile = false }) {
   const links = [
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
-  
+    { href: "https://github.com/Hqzdev/nextjs-ai", label: "GitHub", external: true },
+    { href: "https://lurenai.vercel.app", label: "Get Started", external: true },
   ]
 
   const advancedLinks = [
