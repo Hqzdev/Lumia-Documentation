@@ -19,8 +19,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <FloatingElements />
           <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="flex-1 pt-[104px]">{children}</main>
-            
+            <main className="flex-1 pt-[104px] transition-all duration-300">
+              {children}
+            </main>
           </div>
         </ThemeProvider>
       </body>
@@ -94,14 +95,8 @@ function MobileMenu() {
 
       {isOpen && (
         <div className="fixed inset-0 z-50">
-          {/* Blurred background */}
-          <div 
-            className="absolute inset-0 bg-white/80 backdrop-blur-md"
-            onClick={() => setIsOpen(false)}
-          />
-          
           {/* Menu content */}
-          <div className="relative h-full">
+          <div className="absolute inset-0 bg-white">
             <div className="container mx-auto px-4 py-8">
               <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="text-2xl font-bold">
@@ -133,8 +128,7 @@ function NavLinks({ mobile = false }) {
   const links = [
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
-    { href: "https://github.com/Hqzdev/nextjs-ai", label: "GitHub", external: true },
-    { href: "https://lurenai.vercel.app", label: "Get Started", external: true },
+  
   ]
 
   const advancedLinks = [
