@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function BlogPage() {
   const posts = [
@@ -9,21 +10,24 @@ export default function BlogPage() {
       description: "Learn how to integrate Lumia AI into your applications and start building intelligent features.",
       date: "March 15, 2024",
       readTime: "5 min read",
-      category: "Tutorial"
+      category: "Tutorial",
+      slug: "getting-started"
     },
     {
       title: "Advanced Text Generation Techniques",
       description: "Explore advanced techniques for text generation using Lumia AI's powerful models.",
       date: "March 10, 2024",
       readTime: "8 min read",
-      category: "Technical"
+      category: "Technical",
+      slug: "advanced-text-generation"
     },
     {
       title: "Building Chat Applications with Lumia AI",
       description: "A comprehensive guide to building interactive chat applications using Lumia AI's chat interface.",
       date: "March 5, 2024",
       readTime: "6 min read",
-      category: "Tutorial"
+      category: "Tutorial",
+      slug: "building-chat-applications"
     }
   ]
 
@@ -37,7 +41,7 @@ export default function BlogPage() {
 
         <div className="space-y-8">
           {posts.map((post, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index}>
               <CardHeader>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-blue-600">{post.category}</span>
@@ -49,8 +53,10 @@ export default function BlogPage() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{post.readTime}</span>
-                  <Button variant="ghost" className="text-blue-600 hover:text-blue-700">
-                    Read more <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button variant="ghost" className="text-blue-600 hover:text-blue-700" asChild>
+                    <Link href={`/blog/${post.slug}`}>
+                      Read more <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </div>
               </CardContent>

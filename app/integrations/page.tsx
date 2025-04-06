@@ -33,7 +33,7 @@ export default function IntegrationsPage() {
           {integrations.map((integration, index) => {
             const Icon = integration.icon
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index}>
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-blue-50 rounded-full">
