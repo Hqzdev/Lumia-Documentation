@@ -93,10 +93,8 @@ function MobileMenu() {
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      <div className={`fixed inset-0 z-50 transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
-        <div className="absolute inset-0 bg-white">
+      {isOpen && (
+        <div className="fixed inset-0 z-50 bg-white">
           <div className="container mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="text-2xl font-bold">
@@ -115,7 +113,7 @@ function MobileMenu() {
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
@@ -154,7 +152,7 @@ function NavLinks({ mobile = false }) {
           href={link.href}
           target={link.external ? "_blank" : undefined}
           rel={link.external ? "noopener noreferrer" : undefined}
-          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium ${mobile ? "text-lg py-2" : ""}`}
+          className={`text-gray-700 hover:text-blue-600 font-medium ${mobile ? "text-lg py-2" : ""}`}
         >
           {link.label}
         </Link>
@@ -164,48 +162,48 @@ function NavLinks({ mobile = false }) {
       <div className="relative">
         <button
           onClick={() => setShowAdvancedMenu(!showAdvancedMenu)}
-          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
+          className={`text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
         >
           Advanced
-          <ChevronDown className={`h-4 w-4 transition-transform ${showAdvancedMenu ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`h-4 w-4 ${showAdvancedMenu ? 'rotate-180' : ''}`} />
         </button>
-        <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60 overflow-hidden'} transition-all duration-300 ease-in-out ${
-          showAdvancedMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-        }`}>
-          {advancedLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600 transition-colors`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        {showAdvancedMenu && (
+          <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60'}`}>
+            {advancedLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Resources Menu */}
       <div className="relative">
         <button
           onClick={() => setShowResourcesMenu(!showResourcesMenu)}
-          className={`text-gray-700 hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
+          className={`text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1 ${mobile ? "text-lg py-2" : ""}`}
         >
           Resources
-          <ChevronDown className={`h-4 w-4 transition-transform ${showResourcesMenu ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`h-4 w-4 ${showResourcesMenu ? 'rotate-180' : ''}`} />
         </button>
-        <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60 overflow-hidden'} transition-all duration-300 ease-in-out ${
-          showResourcesMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-        }`}>
-          {resourcesLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600 transition-colors`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        {showResourcesMenu && (
+          <div className={`${mobile ? 'pl-4 mt-2' : 'absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl border border-gray-200/60'}`}>
+            {resourcesLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block ${mobile ? 'py-2' : 'px-4 py-2 hover:bg-gray-50'} text-gray-700 hover:text-blue-600`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </>
   )
