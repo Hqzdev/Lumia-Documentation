@@ -79,7 +79,7 @@ export default function APIReferencePage() {
             <CardHeader>
               <CardTitle>API Key</CardTitle>
               <CardDescription>
-                Enter your API key to test the endpoints
+                Enter your <span className="text-blue-600">API key</span> to test the endpoints
               </CardDescription>
             </CardHeader>
             <CardContent>

@@ -8,6 +8,7 @@ import { Github, Menu, X, ChevronDown } from "lucide-react"
 import { useState, ReactNode } from "react"
 import AnimatedGradient from "@/components/animated-gradient"
 import FloatingElements from "@/components/floating-elements"
+import { SearchBar } from "@/components/search-bar"
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -39,7 +40,7 @@ function Header() {
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
+              className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 to-purple-600 text-transparent bg-clip-text"
             >
               Lumia AI
             </Link>
@@ -77,7 +78,9 @@ function Header() {
           <MobileMenu />
         </div>
       </div>
+     
     </header>
+    
   )
 }
 
@@ -125,8 +128,6 @@ function NavLinks({ mobile = false }) {
   const links = [
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
-    { href: "https://github.com/Hqzdev/nextjs-ai", label: "GitHub", external: true },
-    { href: "https://lurenai.vercel.app", label: "Get Started", external: true },
   ]
 
   const advancedLinks = [
@@ -138,7 +139,7 @@ function NavLinks({ mobile = false }) {
   ]
 
   const resourcesLinks = [
-    { href: "/documentation", label: "Documentation" },
+    { href: "/installation", label: "Documentation" },
     { href: "/blog", label: "Blog" },
     { href: "/community", label: "Community" },
     { href: "/support", label: "Support" },

@@ -21,7 +21,7 @@ export default function ChatInterfaceExample() {
         Learn how to build an interactive chat interface with streaming responses using Lumia AI.
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
         {/* Code Section */}
         <Card className="rounded-2xl">
           <CardHeader>
@@ -42,7 +42,7 @@ export default function ChatInterfaceExample() {
               </TabsList>
 
               <TabsContent value="component">
-                <div className="bg-white rounded-2xl overflow-hidden">
+                <div className="bg-white rounded-2xl overflow-hidden w-full">
                   <pre className="p-4 text-sm overflow-x-auto">
                     <code className="language-javascript">
                       {`import { streamText } from 'ai';

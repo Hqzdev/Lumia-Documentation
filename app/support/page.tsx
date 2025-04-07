@@ -9,7 +9,7 @@ export default function SupportPage() {
       description: "Browse our comprehensive documentation to find answers to common questions.",
       icon: BookOpen,
       action: "View Documentation",
-      href: "/documentation"
+      href: "/tutorials/getting-started"
     },
     {
       title: "Contact Support",
@@ -30,7 +30,7 @@ export default function SupportPage() {
       description: "Join our community forum to get help from other users and share your experiences.",
       icon: MessageSquare,
       action: "Visit Forum",
-      href: "/community"
+      href: "/community/forum"
     }
   ]
 
@@ -46,7 +46,7 @@ export default function SupportPage() {
           {supportOptions.map((option, index) => {
             const Icon = option.icon
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="rounded-2xl border-2 border-gray-200">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-blue-50 rounded-full">

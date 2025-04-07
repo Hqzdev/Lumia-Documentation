@@ -16,14 +16,14 @@ export default function CommunityPage() {
       description: "Connect with other developers, share experiences, and get help from the community.",
       icon: MessageSquare,
       action: "Visit Forum",
-      href: "#"
+      href: "/community/forum"
     },
     {
       title: "Community Projects",
       description: "Discover projects built with Lumia AI and share your own creations.",
       icon: Users,
       action: "View Projects",
-      href: "#"
+      href: "/community/projects"
     }
   ]
 
@@ -39,7 +39,7 @@ export default function CommunityPage() {
           {communitySections.map((section, index) => {
             const Icon = section.icon
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:translate-y-[-5px] border-2 border-gray-200 transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-blue-50 rounded-full">
@@ -55,7 +55,7 @@ export default function CommunityPage() {
                     className="text-blue-600 hover:text-blue-700"
                     asChild
                   >
-                    <a href={section.href} target="_blank" rel="noopener noreferrer">
+                    <a href={section.href} target={section.href.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
                       {section.action}
                     </a>
                   </Button>
