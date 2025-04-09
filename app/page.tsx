@@ -40,6 +40,26 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Dashboard Section */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Try Lumia Dashboard</h2>
+              <p className="text-blue-100">Experience the power of Lumia AI in our interactive dashboard</p>
+            </div>
+            <a 
+              href="https://lumia-dashboard.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 px-6 py-3 rounded-xl font-medium hover:bg-blue-50 transition-colors flex items-center"
+            >
+              Go to Dashboard <ChevronRight className="ml-2 h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Features Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rounded-2xl ">
