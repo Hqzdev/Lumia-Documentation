@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        About <span className="text-blue-600">Lumia AI</span>
+        About <span className="text-blue-600">Yumi AI</span>
       </h1>
       <p className="text-xl text-gray-700 mb-12">
         Empowering developers with cutting-edge AI technology
@@ -25,7 +25,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700">
-              At Lumia AI, we believe in democratizing artificial intelligence. Our mission is to provide developers with powerful, easy-to-use tools that enable them to build innovative applications with AI capabilities. We're committed to making AI technology accessible, reliable, and efficient for developers of all skill levels.
+              At Yumi AI, we believe in democratizing artificial intelligence. Our mission is to provide developers with powerful, easy-to-use tools that enable them to build innovative applications with AI capabilities. We're committed to making AI technology accessible, reliable, and efficient for developers of all skill levels.
             </p>
           </CardContent>
         </Card>

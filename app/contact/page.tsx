@@ -96,8 +96,8 @@ export default function ContactPage() {
                 <Mail className="w-6 h-6 text-blue-600 mt-1 mr-4" />
                 <div>
                   <h3 className="font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-700">support@lumia.ai</p>
-                  <p className="text-gray-700">sales@lumia.ai</p>
+                  <p className="text-gray-700">support@Yumi.ai</p>
+                  <p className="text-gray-700">sales@Yumi.ai</p>
                 </div>
               </div>
               <div className="flex items-start">

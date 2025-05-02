@@ -8,21 +8,21 @@ export default function ProjectsPage() {
   const featuredProjects = [
     {
       title: "AI Content Generator",
-      description: "A web application that generates high-quality content using Lumia AI",
+      description: "A web application that generates high-quality content using Yumi AI",
       stars: 245,
       author: "johndoe",
       icon: Github
     },
     {
       title: "Smart Chat Assistant",
-      description: "An intelligent chatbot powered by Lumia AI for customer support",
+      description: "An intelligent chatbot powered by Yumi AI for customer support",
       stars: 189,
       author: "alice",
       icon: Github
     },
     {
       title: "AI Image Generator",
-      description: "Generate stunning images from text descriptions using Lumia AI",
+      description: "Generate stunning images from text descriptions using Yumi AI",
       stars: 156,
       author: "bob",
       icon: Github

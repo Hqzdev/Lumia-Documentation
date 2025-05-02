@@ -18,7 +18,7 @@ export default function Examples() {
         <span className="text-blue-600">Examples</span> & Use Cases
       </h1>
       <p className="text-xl text-gray-700 mb-12 max-w-3xl">
-        Explore practical examples of the <span className="text-blue-600">Lumia AI</span> in action. Each example includes complete code and explanations.
+        Explore practical examples of the <span className="text-blue-600">Yumi AI</span> in action. Each example includes complete code and explanations.
       </p>
 
       <Tabs defaultValue="code" className="w-full mb-8">
@@ -38,18 +38,18 @@ export default function Examples() {
               <CardTitle>
                 <span className="text-blue-600">Text Generation</span>
               </CardTitle>
-              <CardDescription>Generate text responses using Lumia models</CardDescription>
+              <CardDescription>Generate text responses using Yumi models</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="bg-white rounded-2xl overflow-hidden">
                 <pre className="p-4 text-sm overflow-x-auto">
                   <code className="language-javascript">
                     {`import { generateText } from 'ai';
-import { Lumia } from '@ai-sdk/Lumia';
+import { Yumi } from '@ai-sdk/Yumi';
 
 async function main() {
   const { text } = await generateText({
-    model: Lumia('Lumia-V2-Pro'),
+    model: Yumi('Yumi-V2-Pro'),
     prompt: 'Write a short poem about technology and nature.',
     system: 'You are a creative poet who writes concise, meaningful poems.'
   });
@@ -84,7 +84,7 @@ main();`}
                 <pre className="p-4 text-sm overflow-x-auto">
                   <code className="language-javascript">
                     {`import { streamText } from 'ai';
-import { Lumia } from '@ai-sdk/Lumia';
+import { Yumi } from '@ai-sdk/Yumi';
 import { useState } from 'react';
 
 export default function ChatExample() {
@@ -100,7 +100,7 @@ export default function ChatExample() {
     setInput('');
     
     const result = streamText({
-      model: Lumia('Lumia-V2-Pro'),
+      model: Yumi('Yumi-V2-Pro'),
       prompt: input,
       system: 'You are a helpful assistant.',
       onChunk: ({ chunk }) => {
@@ -190,12 +190,12 @@ export default function ChatExample() {
                 <div className="flex-1 overflow-y-auto space-y-4">
                   <div className="flex justify-end">
                     <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-blue-100 text-gray-800">
-                      Hello! Can you tell me about Lumia AI?
+                      Hello! Can you tell me about Yumi AI?
                     </div>
                   </div>
                   <div className="flex justify-start">
                     <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-gray-100 text-gray-800">
-                      Lumia AI is a powerful toolkit for building AI-powered applications. It provides an easy-to-use API for text generation, chat interfaces, and more.
+                      Yumi AI is a powerful toolkit for building AI-powered applications. It provides an easy-to-use API for text generation, chat interfaces, and more.
                     </div>
                   </div>
                 </div>

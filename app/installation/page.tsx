@@ -15,7 +15,7 @@ export default function Installation() {
       <div className="space-y-12 max-w-3xl">
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Prerequisites</h2>
-          <p className="text-gray-700 mb-4">Before installing the Lumia AI, ensure you have the following:</p>
+          <p className="text-gray-700 mb-4">Before installing the Yumi AI, ensure you have the following:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Node.js 18.x or later</li>
             <li>npm 7.x or later, or yarn 1.22.x or later</li>
@@ -25,7 +25,7 @@ export default function Installation() {
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
-          <p className="text-gray-700 mb-4">You can install the Lumia AI using npm, yarn, or pnpm:</p>
+          <p className="text-gray-700 mb-4">You can install the Yumi AI using npm, yarn, or pnpm:</p>
 
           <Tabs defaultValue="npm" className="mb-6">
             <TabsList className="border border-gray-200 bg-white text-gray-700">
@@ -46,13 +46,13 @@ export default function Installation() {
               </TabsTrigger>
             </TabsList>
             <TabsContent value="npm" className="mt-2">
-              <CopyableCodeBlock code="npm install ai @ai-sdk/Lumia" />
+              <CopyableCodeBlock code="npm install ai @ai-sdk/Yumi" />
             </TabsContent>
             <TabsContent value="yarn" className="mt-2">
-              <CopyableCodeBlock code="yarn add ai @ai-sdk/Lumia" />
+              <CopyableCodeBlock code="yarn add ai @ai-sdk/Yumi" />
             </TabsContent>
             <TabsContent value="pnpm" className="mt-2">
-              <CopyableCodeBlock code="pnpm add ai @ai-sdk/Lumia" />
+              <CopyableCodeBlock code="pnpm add ai @ai-sdk/Yumi" />
             </TabsContent>
           </Tabs>
 
@@ -66,7 +66,7 @@ export default function Installation() {
             project root:
           </p>
 
-          <CopyableCodeBlock code="Lumia_API_KEY=your_Lumia_api_key_here" />
+          <CopyableCodeBlock code="Yumi_API_KEY=your_Yumi_api_key_here" />
 
           <p className="text-gray-700 mt-4">
             Make sure to add <code>.env</code> to your <code>.gitignore</code> file to avoid exposing your <Link href="/apikey" className="text-blue-600 hover:text-blue-700">API keys</Link>.
@@ -82,13 +82,13 @@ export default function Installation() {
               <code className="language-javascript">
                 {`// test.js
 import { generateText } from 'ai';
-import { Lumia } from '@ai-sdk/Lumia';
+import { Yumi } from '@ai-sdk/Yumi';
 
 async function testAiSdk() {
   try {
     const { text } = await generateText({
-      model: Lumia('Lumia-V2-Max'),
-      prompt: 'Hello, Lumia AI!',
+      model: Yumi('Yumi-V2-Max'),
+      prompt: 'Hello, Yumi AI!',
     });
     
     console.log('AI response:', text);
@@ -109,7 +109,7 @@ testAiSdk();`}
 
         <section>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Next Steps</h2>
-          <p className="text-gray-700 mb-4">Now that you've installed the Lumia AI, you can:</p>
+          <p className="text-gray-700 mb-4">Now that you've installed the Yumi AI, you can:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
             <li>
               Explore the{" "}

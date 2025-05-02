@@ -12,7 +12,7 @@ export default function TextGenerationTutorial() {
         <span className="text-blue-600">Text Generation</span> Tutorial
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Learn how to generate high-quality text using Lumia AI models.
+        Learn how to generate high-quality text using Yumi AI models.
       </p>
 
       <div className="space-y-8">
@@ -22,18 +22,18 @@ export default function TextGenerationTutorial() {
             <CardTitle>
               <span className="text-blue-600">Step 1:</span> Initial Setup
             </CardTitle>
-            <CardDescription>Setting up your project with Lumia AI</CardDescription>
+            <CardDescription>Setting up your project with Yumi AI</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <p className="text-gray-700">Install the required dependencies:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>npm install @ai-sdk/lumia</code>
+                <code>npm install @ai-sdk/Yumi</code>
               </pre>
               <p className="text-gray-700">Import the necessary modules:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { generateText } from '@ai-sdk/lumia';
-import { Lumia } from '@ai-sdk/lumia';`}</code>
+                <code>{`import { generateText } from '@ai-sdk/Yumi';
+import { Yumi } from '@ai-sdk/Yumi';`}</code>
               </pre>
             </div>
           </CardContent>
@@ -54,7 +54,7 @@ import { Lumia } from '@ai-sdk/lumia';`}</code>
                 <code>{`async function generateBasicText() {
   try {
     const { text } = await generateText({
-      model: Lumia('Lumia-V2-Pro'),
+      model: Yumi('Yumi-V2-Pro'),
       prompt: 'Write a short story about AI',
       system: 'You are a creative writer.'
     });
@@ -82,7 +82,7 @@ import { Lumia } from '@ai-sdk/lumia';`}</code>
               <p className="text-gray-700">Customize the output with advanced parameters:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
                 <code>{`const response = await generateText({
-  model: Lumia('Lumia-V2-Pro'),
+  model: Yumi('Yumi-V2-Pro'),
   prompt: 'Write a technical blog post about AI',
   system: 'You are an AI expert writing for developers.',
   parameters: {
@@ -123,7 +123,7 @@ import { Lumia } from '@ai-sdk/lumia';`}</code>
                 <code>{`async function generateWithErrorHandling() {
   try {
     const { text, usage } = await generateText({
-      model: Lumia('Lumia-V2-Pro'),
+      model: Yumi('Yumi-V2-Pro'),
       prompt: 'Write about AI safety',
       system: 'You are an AI safety researcher.',
     });

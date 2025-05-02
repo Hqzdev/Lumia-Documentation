@@ -14,7 +14,7 @@ export default function APIKeyPage() {
     setIsGenerating(true)
     // Simulate API key generation
     setTimeout(() => {
-      const newKey = `lumia_${Math.random().toString(36).substring(2, 15)}_${Math.random().toString(36).substring(2, 15)}`
+      const newKey = `Yumi_${Math.random().toString(36).substring(2, 15)}_${Math.random().toString(36).substring(2, 15)}`
       setApiKey(newKey)
       setIsGenerating(false)
     }, 1500)
@@ -32,14 +32,14 @@ export default function APIKeyPage() {
         Generate Your <span className="text-blue-600">API Key</span>
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Get your unique API key to start using Lumia AI
+        Get your unique API key to start using Yumi AI
       </p>
 
       <Card className="rounded-2xl max-w-2xl mx-auto">
         <CardHeader>
           <CardTitle>API Key Generator</CardTitle>
           <CardDescription>
-            Generate a unique API key for accessing Lumia AI services
+            Generate a unique API key for accessing Yumi AI services
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -85,7 +85,7 @@ export default function APIKeyPage() {
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Add your API key to your environment variables</li>
               <li>Configure your application to use the API key</li>
-              <li>Start making API calls to Lumia AI services</li>
+              <li>Start making API calls to Yumi AI services</li>
             </ul>
           </div>
         </CardContent>

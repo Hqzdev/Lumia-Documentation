@@ -6,19 +6,19 @@ export default function ForumPage() {
   const forumCategories = [
     {
       title: "General Discussion",
-      description: "General topics about Lumia AI and community updates",
+      description: "General topics about Yumi AI and community updates",
       posts: 125,
       icon: MessageSquare
     },
     {
       title: "Help & Support",
-      description: "Get help with using Lumia AI and troubleshooting",
+      description: "Get help with using Yumi AI and troubleshooting",
       posts: 89,
       icon: MessageSquare
     },
     {
       title: "Feature Requests",
-      description: "Suggest and discuss new features for Lumia AI",
+      description: "Suggest and discuss new features for Yumi AI",
       posts: 45,
       icon: MessageSquare
     }

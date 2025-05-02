@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <title>Lumia • Documentation</title>
+        <title>Yumi • Documentation</title>
         <ThemeProvider attribute="class" defaultTheme="light">
           <AnimatedGradient />
           <FloatingElements />
@@ -42,7 +42,7 @@ function Header() {
               href="/"
               className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 to-purple-600 text-transparent bg-clip-text"
             >
-              Lumia AI
+              Yumi AI
             </Link>
           </div>
 
@@ -101,7 +101,7 @@ function MobileMenu() {
           <div className="container mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-8">
               <Link href="/" className="text-2xl font-bold">
-                Lumia AI
+                Yumi AI
               </Link>
               <button
                 onClick={() => setIsOpen(false)}

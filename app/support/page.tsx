@@ -16,7 +16,7 @@ export default function SupportPage() {
       description: "Get in touch with our support team for assistance with your specific needs.",
       icon: Mail,
       action: "Send Message",
-      href: "mailto:support@lumia.ai"
+      href: "mailto:support@Yumi.ai"
     },
     {
       title: "Report an Issue",
@@ -39,7 +39,7 @@ export default function SupportPage() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Support</h1>
         <p className="text-xl text-gray-600 text-center mb-12">
-          We're here to help you succeed with Lumia AI
+          We're here to help you succeed with Yumi AI
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

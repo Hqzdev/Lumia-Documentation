@@ -12,7 +12,7 @@ export default function ChatInterfacesTutorial() {
         Building <span className="text-blue-600">Chat Interfaces</span>
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Learn how to create interactive chat applications with Lumia AI.
+        Learn how to create interactive chat applications with Yumi AI.
       </p>
 
       <div className="space-y-8">
@@ -28,7 +28,7 @@ export default function ChatInterfacesTutorial() {
             <div className="space-y-4">
               <p className="text-gray-700">First, install the required dependencies:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>npm install @ai-sdk/lumia react @types/react</code>
+                <code>npm install @ai-sdk/Yumi react @types/react</code>
               </pre>
               <p className="text-gray-700">Create a new component file for your chat interface:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
@@ -51,7 +51,7 @@ export default function ChatInterfacesTutorial() {
               <p className="text-gray-700">Set up the basic component structure with state management:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
                 <code>{`import { useState } from 'react';
-import { Lumia } from '@ai-sdk/lumia';
+import { Yumi } from '@ai-sdk/Yumi';
 
 export default function ChatInterface() {
   const [messages, setMessages] = useState([]);
@@ -117,17 +117,17 @@ const handleSubmit = (e) => {
             <CardTitle>
               <span className="text-blue-600">Step 4:</span> AI Integration
             </CardTitle>
-            <CardDescription>Connecting with Lumia AI for responses</CardDescription>
+            <CardDescription>Connecting with Yumi AI for responses</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <p className="text-gray-700">Integrate Lumia AI for streaming responses:</p>
+              <p className="text-gray-700">Integrate Yumi AI for streaming responses:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { streamText } from '@ai-sdk/lumia';
+                <code>{`import { streamText } from '@ai-sdk/Yumi';
 
 // Add to your handleSubmit function:
 const response = await streamText({
-  model: Lumia('Lumia-V2-Pro'),
+  model: Yumi('Yumi-V2-Pro'),
   prompt: input,
   system: 'You are a helpful assistant.',
   onChunk: ({ chunk }) => {

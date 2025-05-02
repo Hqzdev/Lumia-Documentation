@@ -10,7 +10,7 @@ export default function FeaturesPage() {
         <span className="text-blue-600">Features</span>
       </h1>
       <p className="text-xl text-gray-700 mb-12">
-        Discover the powerful capabilities of Lumia AI
+        Discover the powerful capabilities of Yumi AI
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -9,10 +9,10 @@ export default function GettingStartedTutorial() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        Getting Started with <span className="text-blue-600">Lumia AI</span>
+        Getting Started with <span className="text-blue-600">Yumi AI</span>
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Learn how to set up and start using Lumia AI in your projects.
+        Learn how to set up and start using Yumi AI in your projects.
       </p>
 
       <div className="space-y-8">
@@ -22,17 +22,17 @@ export default function GettingStartedTutorial() {
             <CardTitle>
               <span className="text-blue-600">Step 1:</span> Installation
             </CardTitle>
-            <CardDescription>Setting up Lumia AI in your project</CardDescription>
+            <CardDescription>Setting up Yumi AI in your project</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <p className="text-gray-700">Install the Lumia AI SDK using npm:</p>
+              <p className="text-gray-700">Install the Yumi AI SDK using npm:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>npm install @ai-sdk/lumia</code>
+                <code>npm install @ai-sdk/Yumi</code>
               </pre>
               <p className="text-gray-700">Or using yarn:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>yarn add @ai-sdk/lumia</code>
+                <code>yarn add @ai-sdk/Yumi</code>
               </pre>
             </div>
           </CardContent>
@@ -50,12 +50,12 @@ export default function GettingStartedTutorial() {
             <div className="space-y-4">
               <p className="text-gray-700">Create a configuration file:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`// config/lumia.ts
-import { LumiaConfig } from '@ai-sdk/lumia';
+                <code>{`// config/Yumi.ts
+import { YumiConfig } from '@ai-sdk/Yumi';
 
-export const config: LumiaConfig = {
-  apiKey: process.env.LUMIA_API_KEY,
-  defaultModel: 'Lumia-V2-Pro',
+export const config: YumiConfig = {
+  apiKey: process.env.Yumi_API_KEY,
+  defaultModel: 'Yumi-V2-Pro',
   // Optional: Configure default parameters
   defaultParams: {
     temperature: 0.7,
@@ -67,7 +67,7 @@ export const config: LumiaConfig = {
               <p className="text-gray-700">Get your API key <Link href="/apikey" className="text-blue-600 hover:text-blue-700">here</Link></p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
                 <code>{`# .env.local
-LUMIA_API_KEY=your_api_key_here`}</code>
+Yumi_API_KEY=your_api_key_here`}</code>
               </pre>
             </div>
           </CardContent>
@@ -85,7 +85,7 @@ LUMIA_API_KEY=your_api_key_here`}</code>
             <div className="space-y-4">
               <p className="text-gray-700">Create a simple text generation example:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { generateText } from '@ai-sdk/lumia';
+                <code>{`import { generateText } from '@ai-sdk/Yumi';
 
 async function generateResponse() {
   try {
@@ -110,7 +110,7 @@ async function generateResponse() {
             <CardTitle>
               <span className="text-blue-600">Step 4:</span> Project Structure
             </CardTitle>
-            <CardDescription>Organize your Lumia AI project</CardDescription>
+            <CardDescription>Organize your Yumi AI project</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -119,7 +119,7 @@ async function generateResponse() {
                 <code>{`your-project/
 ├── src/
 │   ├── config/
-│   │   └── lumia.ts
+│   │   └── Yumi.ts
 │   ├── services/
 │   │   └── ai.service.ts
 │   └── components/
@@ -132,8 +132,8 @@ async function generateResponse() {
               <p className="text-gray-700">Example AI service:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
                 <code>{`// services/ai.service.ts
-import { generateText, streamText } from '@ai-sdk/lumia';
-import { config } from '../config/lumia';
+import { generateText, streamText } from '@ai-sdk/Yumi';
+import { config } from '../config/Yumi';
 
 export class AIService {
   static async generate(prompt: string) {
