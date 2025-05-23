@@ -24,7 +24,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white z-0" />
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500  to-indigo-600 text-transparent bg-clip-text mb-6">Yumi AI Documentation</h1>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500  to-indigo-600 text-transparent bg-clip-text mb-6">Lumia AI Documentation</h1>
             <p className="text-xl text-gray-700 mb-8">
               A powerful toolkit for building AI-powered applications with ease
             </p>
@@ -45,11 +45,11 @@ export default function Home() {
         <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-white">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Try Yumi Dashboard</h2>
-              <p className="text-blue-100">Experience the power of Yumi AI in our interactive dashboard</p>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Try Lumia Dashboard</h2>
+              <p className="text-blue-100">Experience the power of Lumia AI in our interactive dashboard</p>
             </div>
             <a 
-              href="https://Yumi-dashboard.vercel.app" 
+              href="https://Lumia-dashboard.vercel.app" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white text-blue-600 px-6 py-3 rounded-xl font-medium hover:bg-blue-50 transition-colors flex items-center"
@@ -98,12 +98,12 @@ export default function Home() {
               <pre className="p-4 text-sm overflow-x-auto">
                 <code className="language-javascript">
                   {`import { generateText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 
 async function main() {
-  // Generate text with Yumi model
+  // Generate text with Lumia model
   const { text } = await generateText({
-    model: Yumi('Yumi-v2'),
+    model: Lumia('Lumia-v2'),
     prompt: 'Explain quantum computing in simple terms',
     system: 'You are a helpful assistant that explains complex topics simply.'
   });
@@ -130,7 +130,7 @@ main();`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <DocCard
             title="Installation Guide"
-            description="Learn how to install and set up the Yumi AI in your project."
+            description="Learn how to install and set up the Lumia AI in your project."
             icon={<BookOpen className="h-6 w-6 text-blue-500" />}
             href="/installation"
           />
@@ -164,7 +164,7 @@ main();`}
                 <div className="h-10 w-10 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 mr-3 flex items-center justify-center">
                   <span className="text-2xl font-bold">L</span>
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Yumi.ai</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Lumia.ai</span>
               </div>
               <p className="text-gray-400 max-w-sm">
                 Empowering your creativity and productivity with advanced AI technology.
@@ -183,8 +183,8 @@ main();`}
 
             <div className="space-y-4">
               <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-              <a href="mailto:info@Yumi.ai" className="text-gray-400 hover:text-blue-400 transition-colors block">
-                info@Yumi.ai
+              <a href="mailto:info@Lumia.ai" className="text-gray-400 hover:text-blue-400 transition-colors block">
+                info@Lumia.ai
               </a>
               <div className="flex space-x-4 mt-4">
                 <a href="https://github.com/Hqzdev/nextjs-ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors p-2 rounded-lg hover:bg-blue-500/10">

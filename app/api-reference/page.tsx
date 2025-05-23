@@ -104,7 +104,7 @@ export default function APIReferencePage() {
                 <Card className="rounded-2xl">
                   <CardContent className="p-4">
                     <pre className="bg-gray-50 p-4 rounded-lg overflow-x-auto">
-                      <code>{`curl https://api.Yumi.ai/v1/${selectedEndpoint} \\
+                      <code>{`curl https://api.Lumia.ai/v1/${selectedEndpoint} \\
   -H "Authorization: Bearer ${apiKey || 'YOUR_API_KEY'}" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -119,7 +119,7 @@ export default function APIReferencePage() {
                 <Card className="rounded-2xl">
                   <CardContent className="p-4">
                     <pre className="bg-gray-50 p-4 rounded-lg overflow-x-auto">
-                      <code>{`const response = await fetch('https://api.Yumi.ai/v1/${selectedEndpoint}', {
+                      <code>{`const response = await fetch('https://api.Lumia.ai/v1/${selectedEndpoint}', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer ${apiKey || 'YOUR_API_KEY'}',
@@ -141,7 +141,7 @@ export default function APIReferencePage() {
                       <code>{`import requests
 
 response = requests.post(
-  'https://api.Yumi.ai/v1/${selectedEndpoint}',
+  'https://api.Lumia.ai/v1/${selectedEndpoint}',
   headers={
     'Authorization': f'Bearer ${apiKey || 'YOUR_API_KEY'}',
     'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ export default function AdvancedTextGeneration() {
 
         <div className="prose prose-lg max-w-none border-2 border-gray-200 rounded-2xl lg:p-8">
           <p className="lead text-gray-700 font-semibold text-xl">
-            Discover how to leverage Yumi AI's advanced capabilities for sophisticated text generation tasks.
+            Discover how to leverage Lumia AI's advanced capabilities for sophisticated text generation tasks.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900">Understanding Model Parameters</h2>
@@ -37,7 +37,7 @@ export default function AdvancedTextGeneration() {
             Effective prompt engineering is key to generating high-quality text. Here's an example of an advanced prompt structure:
           </p>
           <pre><code>{`
-const response = await Yumi.generate({
+const response = await Lumia.generate({
   prompt: {
     context: "You are an expert technical writer",
     instruction: "Write a detailed explanation",

@@ -20,7 +20,7 @@ export default function CommunityPage() {
     },
     {
       title: "Community Projects",
-      description: "Discover projects built with Yumi AI and share your own creations.",
+      description: "Discover projects built with Lumia AI and share your own creations.",
       icon: Users,
       action: "View Projects",
       href: "/community/projects"

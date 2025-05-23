@@ -15,7 +15,7 @@ export default function TextGenerationExample() {
         <span className="text-blue-600">Text Generation</span> Example
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Learn how to generate text using different models and parameters with Yumi AI.
+        Learn how to generate text using different models and parameters with Lumia AI.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -43,12 +43,12 @@ export default function TextGenerationExample() {
                   <pre className="p-4 text-sm overflow-x-auto">
                     <code className="language-javascript">
                       {`import { generateText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 
 // Basic text generation
 async function generateBasicText() {
   const { text } = await generateText({
-    model: Yumi('Yumi-V2-Pro'),
+    model: Lumia('Lumia-V2-Pro'),
     prompt: 'Write a short story about AI',
     system: 'You are a creative writer.'
   });
@@ -67,12 +67,12 @@ generateBasicText();`}
                   <pre className="p-4 text-sm overflow-x-auto">
                     <code className="language-javascript">
                       {`import { generateText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 
 // Advanced text generation with parameters
 async function generateAdvancedText() {
   const { text, usage } = await generateText({
-    model: Yumi('Yumi-V2-Pro'),
+    model: Lumia('Lumia-V2-Pro'),
     prompt: 'Write a technical blog post about AI',
     system: 'You are an AI expert writing for developers.',
     parameters: {

@@ -29,11 +29,11 @@ export default function DiscordIntegrationPage() {
           <Card>
             <CardHeader>
               <CardTitle>Getting Started</CardTitle>
-              <CardDescription>Set up Yumi AI in your Discord server</CardDescription>
+              <CardDescription>Set up Lumia AI in your Discord server</CardDescription>
             </CardHeader>
             <CardContent>
               <ol className="list-decimal list-inside space-y-4 text-gray-700">
-                <li>Invite the Yumi AI bot to your server</li>
+                <li>Invite the Lumia AI bot to your server</li>
                 <li>Configure the bot permissions</li>
                 <li>Set up your API key using the /config command</li>
                 <li>Start using AI features in your channels</li>
@@ -44,7 +44,7 @@ export default function DiscordIntegrationPage() {
           <Card>
             <CardHeader>
               <CardTitle>Features</CardTitle>
-              <CardDescription>What you can do with Yumi AI in Discord</CardDescription>
+              <CardDescription>What you can do with Lumia AI in Discord</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside space-y-2 text-gray-700">

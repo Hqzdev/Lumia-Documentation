@@ -8,7 +8,7 @@ export default function GettingStarted() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Getting Started with Yumi AI</h1>
+        <h1 className="text-4xl font-bold mb-4">Getting Started with Lumia AI</h1>
         <div className="flex items-center gap-4 text-gray-600 mb-8">
           <span>March 15, 2024</span>
           <span>•</span>
@@ -19,32 +19,32 @@ export default function GettingStarted() {
 
         <div className="prose prose-lg max-w-none border-2 border-gray-200 rounded-2xl lg:p-8">
           <p className="lead text-gray-700 font-semibold text-xl">
-            Welcome to Yumi AI! This guide will help you get started with integrating our AI capabilities into your applications.
+            Welcome to Lumia AI! This guide will help you get started with integrating our AI capabilities into your applications.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900">Prerequisites</h2>
           <ul className="list-disc pl-5 space-y-2 text-gray-700">
             <li>Basic understanding of JavaScript/TypeScript</li>
             <li>Node.js installed on your machine</li>
-            <li>A Yumi AI API key</li>
+            <li>A Lumia AI API key</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-gray-900">Installation</h2>
           <p className="text-gray-700">
-            First, install the Yumi AI SDK using npm:
+            First, install the Lumia AI SDK using npm:
           </p>
-          <pre><code>npm install @Yumi/ai</code></pre>
+          <pre><code>npm install @Lumia/ai</code></pre>
 
           <h2>Basic Usage</h2>
           <p>
-            Here's a simple example of how to use Yumi AI for text generation:
+            Here's a simple example of how to use Lumia AI for text generation:
           </p>
           <pre><code>{`
-import { YumiAI } from '@Yumi/ai';
+import { LumiaAI } from '@Lumia/ai';
 
-const Yumi = new YumiAI('YOUR_API_KEY');
+const Lumia = new LumiaAI('YOUR_API_KEY');
 
-const response = await Yumi.generate({
+const response = await Lumia.generate({
   prompt: "Write a creative story",
   maxTokens: 100
 });

@@ -18,7 +18,7 @@ export default function ChatInterfaceExample() {
         <span className="text-blue-600">Chat Interface</span> Example
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Learn how to build an interactive chat interface with streaming responses using Yumi AI.
+        Learn how to build an interactive chat interface with streaming responses using Lumia AI.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
@@ -46,7 +46,7 @@ export default function ChatInterfaceExample() {
                   <pre className="p-4 text-sm overflow-x-auto">
                     <code className="language-javascript">
                       {`import { streamText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 import { useState } from 'react';
 
 export default function ChatInterface() {
@@ -71,7 +71,7 @@ export default function ChatInterface() {
     try {
       // Stream the response
       const result = streamText({
-        model: Yumi('Yumi-V2-Pro'),
+        model: Lumia('Lumia-V2-Pro'),
         prompt: input,
         system: 'You are a helpful assistant.',
         onChunk: ({ chunk }) => {

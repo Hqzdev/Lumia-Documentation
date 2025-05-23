@@ -6,8 +6,8 @@ import Link from "next/link"
 export default function BlogPage() {
   const posts = [
     {
-      title: "Getting Started with Yumi AI",
-      description: "Learn how to integrate Yumi AI into your applications and start building intelligent features.",
+      title: "Getting Started with Lumia AI",
+      description: "Learn how to integrate Lumia AI into your applications and start building intelligent features.",
       date: "March 15, 2024",
       readTime: "5 min read",
       category: "Tutorial",
@@ -15,15 +15,15 @@ export default function BlogPage() {
     },
     {
       title: "Advanced Text Generation Techniques",
-      description: "Explore advanced techniques for text generation using Yumi AI's powerful models.",
+      description: "Explore advanced techniques for text generation using Lumia AI's powerful models.",
       date: "March 10, 2024",
       readTime: "8 min read",
       category: "Technical",
       slug: "advanced-text-generation"
     },
     {
-      title: "Building Chat Applications with Yumi AI",
-      description: "A comprehensive guide to building interactive chat applications using Yumi AI's chat interface.",
+      title: "Building Chat Applications with Lumia AI",
+      description: "A comprehensive guide to building interactive chat applications using Lumia AI's chat interface.",
       date: "March 5, 2024",
       readTime: "6 min read",
       category: "Tutorial",
@@ -36,7 +36,7 @@ export default function BlogPage() {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Blog</h1>
         <p className="text-xl text-gray-600 text-center mb-12">
-          Latest updates, tutorials, and insights about Yumi AI
+          Latest updates, tutorials, and insights about Lumia AI
         </p>
 
         <div className="space-y-8">

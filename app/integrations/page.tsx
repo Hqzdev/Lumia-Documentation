@@ -9,7 +9,7 @@ export default function IntegrationsPage() {
   const integrations = [
     {
       title: "Slack Integration",
-      description: "Connect Yumi AI with your Slack workspace to enable AI-powered conversations and automation.",
+      description: "Connect Lumia AI with your Slack workspace to enable AI-powered conversations and automation.",
       icon: Slack,
       href: "/integrations/slack"
     },
@@ -26,7 +26,7 @@ export default function IntegrationsPage() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Integrations</h1>
         <p className="text-xl text-gray-600 text-center mb-12">
-          Connect Yumi AI with your favorite services and platforms
+          Connect Lumia AI with your favorite services and platforms
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

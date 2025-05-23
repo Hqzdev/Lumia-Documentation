@@ -9,10 +9,10 @@ export default function AdvancedTutorial() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        Advanced <span className="text-blue-600">Yumi AI</span> Techniques
+        Advanced <span className="text-blue-600">Lumia AI</span> Techniques
       </h1>
       <p className="text-xl text-gray-700 mb-8">
-        Master advanced features and optimize your Yumi AI implementations.
+        Master advanced features and optimize your Lumia AI implementations.
       </p>
 
       <div className="space-y-8">
@@ -28,7 +28,7 @@ export default function AdvancedTutorial() {
             <div className="space-y-4">
               <p className="text-gray-700">Create custom model configurations:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { YumiConfig, ModelConfig } from '@ai-sdk/Yumi';
+                <code>{`import { LumiaConfig, ModelConfig } from '@ai-sdk/Lumia';
 
 const creativeConfig: ModelConfig = {
   temperature: 0.9,
@@ -67,7 +67,7 @@ export const modelConfigs = {
             <div className="space-y-4">
               <p className="text-gray-700">Implement caching and request batching:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { generateText } from '@ai-sdk/Yumi';
+                <code>{`import { generateText } from '@ai-sdk/Lumia';
 import { LRUCache } from 'lru-cache';
 
 const cache = new LRUCache({
@@ -191,7 +191,7 @@ async function generateWithCache(prompt: string) {
             <div className="space-y-4">
               <p className="text-gray-700">Implement comprehensive logging:</p>
               <pre className="bg-white rounded-2xl p-4 text-sm overflow-x-auto">
-                <code>{`import { generateText } from '@ai-sdk/Yumi';
+                <code>{`import { generateText } from '@ai-sdk/Lumia';
 
 class AILogger {
   static async trackGeneration(prompt: string) {

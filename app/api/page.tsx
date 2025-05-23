@@ -47,7 +47,7 @@ export default function ApiReference() {
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">model</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">AIModel</td>
-                  <td className="px-6 py-4 text-sm text-gray-500">Specify which Yumi AI model to use for generation</td>
+                  <td className="px-6 py-4 text-sm text-gray-500">Specify which Lumia AI model to use for generation</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">prompt</td>
@@ -92,11 +92,11 @@ export default function ApiReference() {
                 <pre className="p-4 text-sm overflow-x-auto">
                   <code className="language-javascript">
                     {`import { generateText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 
 async function createBlogPost() {
   const { text } = await generateText({
-    model: Yumi('Yumi-V2-Pro'),
+    model: Lumia('Lumia-V2-Pro'),
     prompt: 'Write a blog post about AI in healthcare',
     system: 'You are an expert in healthcare technology'
   });
@@ -114,11 +114,11 @@ createBlogPost();`}
                 <pre className="p-4 text-sm overflow-x-auto">
                   <code className="language-typescript">
                     {`import { generateText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 import type { AIModel } from 'ai';
 
 async function createBlogPost(): Promise<void> {
-  const model: AIModel = Yumi('Yumi-V2-Pro');
+  const model: AIModel = Lumia('Lumia-V2-Pro');
   
   const { text } = await generateText({
     model,
@@ -175,7 +175,7 @@ createBlogPost();`}
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">model</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">AIModel</td>
-                  <td className="px-6 py-4 text-sm text-gray-500">Choose your preferred Yumi AI model</td>
+                  <td className="px-6 py-4 text-sm text-gray-500">Choose your preferred Lumia AI model</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">prompt</td>
@@ -220,11 +220,11 @@ createBlogPost();`}
             <pre className="p-4 text-sm overflow-x-auto">
               <code className="language-javascript">
                 {`import { streamText } from 'ai';
-import { Yumi } from '@ai-sdk/Yumi';
+import { Lumia } from '@ai-sdk/Lumia';
 
 function createStory() {
   const result = streamText({
-    model: Yumi('Yumi-V2-Pro'),
+    model: Lumia('Lumia-V2-Pro'),
     prompt: 'Write a story about a digital artist',
     system: 'You are a creative storyteller',
     onChunk: ({ chunk }) => {

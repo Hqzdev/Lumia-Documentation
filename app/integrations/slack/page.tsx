@@ -22,18 +22,18 @@ export default function SlackIntegrationPage() {
         </div>
 
         <p className="text-xl text-gray-600 mb-12">
-          Connect Yumi AI with your Slack workspace to enable AI-powered conversations and automation.
+          Connect Lumia AI with your Slack workspace to enable AI-powered conversations and automation.
         </p>
 
         <div className="space-y-8">
           <Card>
             <CardHeader>
               <CardTitle>Getting Started</CardTitle>
-              <CardDescription>Set up Yumi AI in your Slack workspace</CardDescription>
+              <CardDescription>Set up Lumia AI in your Slack workspace</CardDescription>
             </CardHeader>
             <CardContent>
               <ol className="list-decimal list-inside space-y-4 text-gray-700">
-                <li>Install the Yumi AI app from the Slack App Directory</li>
+                <li>Install the Lumia AI app from the Slack App Directory</li>
                 <li>Authorize the app to access your workspace</li>
                 <li>Configure your API key in the app settings</li>
                 <li>Start using AI features in your channels</li>
@@ -44,7 +44,7 @@ export default function SlackIntegrationPage() {
           <Card>
             <CardHeader>
               <CardTitle>Features</CardTitle>
-              <CardDescription>What you can do with Yumi AI in Slack</CardDescription>
+              <CardDescription>What you can do with Lumia AI in Slack</CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -67,10 +67,10 @@ export default function SlackIntegrationPage() {
                 <div>
                   <h3 className="font-semibold mb-2">API Key Setup</h3>
                   <p className="text-gray-700 mb-4">
-                    Add your Yumi AI API key to enable the integration:
+                    Add your Lumia AI API key to enable the integration:
                   </p>
                   <code className="block p-4 bg-gray-100 rounded-lg text-sm">
-                    /Yumi config api_key YOUR_API_KEY
+                    /Lumia config api_key YOUR_API_KEY
                   </code>
                 </div>
                 <div>
@@ -79,7 +79,7 @@ export default function SlackIntegrationPage() {
                     Configure which channels can use AI features:
                   </p>
                   <code className="block p-4 bg-gray-100 rounded-lg text-sm">
-                    /Yumi config channel #channel-name
+                    /Lumia config channel #channel-name
                   </code>
                 </div>
               </div>

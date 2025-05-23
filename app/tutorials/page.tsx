@@ -12,7 +12,7 @@ export default function Tutorials() {
         <span className="text-blue-600">Tutorials</span> & Guides
       </h1>
       <p className="text-xl text-gray-700 mb-12 max-w-3xl">
-        Learn how to use <span className="text-blue-600">Yumi AI</span> with our step-by-step tutorials and comprehensive guides.
+        Learn how to use <span className="text-blue-600">Lumia AI</span> with our step-by-step tutorials and comprehensive guides.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -22,7 +22,7 @@ export default function Tutorials() {
             <CardTitle>
               <span className="text-blue-600">Getting Started</span>
             </CardTitle>
-            <CardDescription>Learn the basics of Yumi AI and set up your first project</CardDescription>
+            <CardDescription>Learn the basics of Lumia AI and set up your first project</CardDescription>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
